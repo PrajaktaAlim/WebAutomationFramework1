@@ -3,8 +3,8 @@
 #from selenium import webdriver
 #from WebAutomationFramework1.pages.login_page import Login_Page
 #from WebAutomationFramework1.pages.home_page import Home_Page
-from login import Login_Page
-from home import Home_Page
+from login_page import Login_Page
+from home_page import Home_Page
 from WebAutomationFramework1.utils import utils
 #import pytest
 import allure
@@ -34,7 +34,7 @@ class Test_Login:
         try:
             homePg.click_welcome()
             homePg.click_logout()
-            assert chrome_browser.title == "OrangeHR"
+            assert chrome_browser.title == "OrangeHRM"
         except AssertionError as ae:
             print("Assertion error occurred")
             #Get current time
